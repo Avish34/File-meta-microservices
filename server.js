@@ -1,9 +1,9 @@
 var express = require('express');
 var cors = require('cors');
 require('dotenv').config()
-
+var router=require('./app')
 var app = express();
-
+app.use(router)
 app.use(cors());
 app.use('/public', express.static(process.cwd() + '/public'));
 
